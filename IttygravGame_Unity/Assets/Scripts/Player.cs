@@ -110,7 +110,7 @@ public class Player : MonoBehaviour
 
                 //GetComponent<AudioSource>().clip = JumpAudio;
                 //GetComponent<AudioSource>().Play();
-                GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioController>().PlayPlayerFX(0);
+                if(GameObject.FindGameObjectWithTag("AudioSource")) GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioController>().PlayPlayerFX(0);
             }
         }
         else

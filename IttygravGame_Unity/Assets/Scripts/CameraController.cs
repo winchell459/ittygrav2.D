@@ -10,7 +10,7 @@ public class CameraController : MonoBehaviour {
     public bool FollowPlayer = true;
     public PointOfInterest POI;
 
-    public GameObject AttensionArrow;
+    public GameObject AttentionArrow;
     public GameObject Lever;
 
     public LayerMask CameraMask;
@@ -43,7 +43,7 @@ public class CameraController : MonoBehaviour {
         }
         else
         {
-            AttensionArrow.SetActive(false);
+            if(AttentionArrow) AttentionArrow.SetActive(false);
         }
         
         
@@ -102,7 +102,7 @@ public class CameraController : MonoBehaviour {
     float radius = 2;
     void handleAttensionArrow()
     {
-        if (AttensionArrow)
+        if (AttentionArrow)
         {
             float y = Lever.transform.position.y;
             float x = Lever.transform.position.x;
@@ -113,7 +113,7 @@ public class CameraController : MonoBehaviour {
             float zRot = Mathf.Atan(y / x) * 180 / Mathf.PI;
 
             //AttensionArrow.transform.eulerAngles = new Vector3(0, 0, zRot);
-            AttensionArrow.transform.right = new Vector2(x, y);
+            AttentionArrow.transform.right = new Vector2(x, y);
 
             //calculate distance
             var rayVector = (Vector2)Player.transform.position;
@@ -131,15 +131,15 @@ public class CameraController : MonoBehaviour {
                 radius = Mathf.Sin(zRot * Mathf.PI / 180) / edgeY;
                 //Debug.Log(raycastHit.transform.name + "(" + edgeX + ", " + edgeY + ")");
 
-                AttensionArrow.transform.position = new Vector3(edgeX, edgeY, 0);
+                AttentionArrow.transform.position = new Vector3(edgeX, edgeY, 0);
 
                 if(Vector3.Distance(Player.transform.position, new Vector3(edgeX, edgeY, 0)) > Vector3.Distance(Player.transform.position, Lever.transform.position))
                 {
-                    AttensionArrow.gameObject.SetActive(false);
+                    AttentionArrow.gameObject.SetActive(false);
                 }
                 else
                 {
-                    AttensionArrow.gameObject.SetActive(true);
+                    AttentionArrow.gameObject.SetActive(true);
                 }
 
             }

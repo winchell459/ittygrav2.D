@@ -27,7 +27,7 @@ public class TransitionCollider : MonoBehaviour
     private void FixedUpdate()
     {
         //checkCollision();
-        Debug.Log(positionOffset[0] + ", " + positionOffset[1] + ", " + positionOffset[2] + ", " + positionOffset[3]);
+        //SDebug.Log(positionOffset[0] + ", " + positionOffset[1] + ", " + positionOffset[2] + ", " + positionOffset[3]);
         Debug.DrawRay(this.GetComponent<Rigidbody2D>().transform.position + CooridinateMatrix[positionOffset[0], 0], CooridinateMatrix[positionOffset[0], 1], Color.red);
         Debug.DrawRay(this.GetComponent<Rigidbody2D>().transform.position + CooridinateMatrix[positionOffset[1], 0], CooridinateMatrix[positionOffset[1], 1], Color.red);
         Debug.DrawRay(this.GetComponent<Rigidbody2D>().transform.position + CooridinateMatrix[positionOffset[2], 0], CooridinateMatrix[positionOffset[2], 1], Color.red);

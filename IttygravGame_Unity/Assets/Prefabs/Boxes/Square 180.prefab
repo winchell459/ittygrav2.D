@@ -117,7 +117,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 0.31, y: 0.31}
   m_EdgeRadius: 0
 --- !u!114 &114223946459043218
 MonoBehaviour:
@@ -147,6 +147,7 @@ MonoBehaviour:
     GravityCoefficient: 9.81
     StaticFriction: 0.2
     DynamicFriction: 0.1
+  DeltaMoveCoefficient: 1.5
 --- !u!212 &212337826582994400
 SpriteRenderer:
   m_ObjectHideFlags: 1
