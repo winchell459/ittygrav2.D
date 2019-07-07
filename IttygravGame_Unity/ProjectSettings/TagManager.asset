@@ -17,6 +17,7 @@ TagManager:
   - AudioSource
   - MiniMap
   - Platform
+  - ProgramBlock
   layers:
   - Default
   - TransparentFX

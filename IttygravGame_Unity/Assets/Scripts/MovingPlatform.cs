@@ -8,10 +8,14 @@ public class MovingPlatform : MonoBehaviour {
     public float Speed = 10f;
     public float WaitTime = 2f;
     private float freezeTime = float.NegativeInfinity;
-    private bool moving = true;
+    public bool moving = false;
 
     private List<Transform> collidingObjects = new List<Transform>();
     private List<Transform> handledCollidingObjects = new List<Transform>();
+
+    public bool IgnoreStacking = false;
+    public bool Pushing = false;
+    public MovingPlatform PairedPlatform;
 
 	// Use this for initialization
 	void Start () {
@@ -23,7 +27,7 @@ public class MovingPlatform : MonoBehaviour {
         if(moving){
             Vector3 displacement = Vector3.MoveTowards(transform.position, Waypoints[index].position, Speed * Time.deltaTime) - transform.position;
             transform.position = Vector3.MoveTowards(transform.position, Waypoints[index].position, Speed * Time.deltaTime);
-            checkCollidingObjects(collidingObjects, displacement);
+            if (!IgnoreStacking) checkCollidingObjects(collidingObjects, displacement);
             //for (int i = 0; i < collidingObjects.Count; i += 1){
             //    collidingObjects[i].position += displacement;
             //}
@@ -31,8 +35,14 @@ public class MovingPlatform : MonoBehaviour {
                 moving = false;
                 index = (index + 1) % Waypoints.Length;
                 freezeTime = Time.fixedTime;
+                
+                
             }
-        }else if(freezeTime + WaitTime < Time.fixedTime){
+        }else if(freezeTime + WaitTime < Time.fixedTime && !PairedPlatform)
+        {
+            moving = true;
+        }else if(freezeTime + WaitTime < Time.fixedTime && !PairedPlatform.moving)
+        {
             moving = true;
         }
 

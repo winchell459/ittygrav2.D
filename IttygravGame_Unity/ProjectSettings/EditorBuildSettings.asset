@@ -12,10 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 54c05930c96e0754d9a67922654f598d
   - enabled: 1
+    path: Assets/Scenes/Campaign/GravShip_02.unity
+    guid: ca222e40ddf518a48a2d8236c108dfb6
+  - enabled: 1
     path: Assets/Scenes/Campaign/GravShip_00.unity
     guid: aef5be21041169040a2a615ebd63b8ae
   - enabled: 1
-    path: Assets/Scenes/Campaign/GravShip_01.unity
+    path: Assets/Scenes/Campaign/GravShipCommand_00.unity
     guid: dd1b9d80a7e21b4438fb68935ab3a82b
   - enabled: 0
     path: Assets/Scenes/Level_01.unity

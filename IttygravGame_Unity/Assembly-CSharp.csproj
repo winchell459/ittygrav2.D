@@ -74,7 +74,11 @@
     <Compile Include="Assets\Scripts\ControllerState2D.cs" />
     <Compile Include="Assets\Scripts\CrateController2D.cs" />
     <Compile Include="Assets\Scripts\CrateParameters2D.cs" />
-    <Compile Include="Assets\Scripts\GravityGun.cs" />
+    <Compile Include="Assets\Scripts\GravScripts\GravGear.cs" />
+    <Compile Include="Assets\Scripts\GravScripts\GravityGun.cs" />
+    <Compile Include="Assets\Scripts\GravScripts\GravObject.cs" />
+    <Compile Include="Assets\Scripts\GravScripts\ProgramBlock.cs" />
+    <Compile Include="Assets\Scripts\GravScripts\ProgramPad.cs" />
     <Compile Include="Assets\Scripts\LazerScript.cs" />
     <Compile Include="Assets\Scripts\LevelHandler.cs" />
     <Compile Include="Assets\Scripts\LevelRef.cs" />

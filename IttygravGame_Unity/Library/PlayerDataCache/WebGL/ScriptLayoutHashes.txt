@@ -1,9 +1,10 @@
 WebGL
 PlayerPath?
-D:/Users/johnc/Documents/GitHub/ittygrav2.D/ittygrav2.D/IttygravGame_Unity/Builds/WebBuild_00
+D:/Users/johnc/Documents/GitHub/ittygrav2.D/ittygrav2.D/IttygravGame_Unity/Builds/WebBuild_01
 SceneListBegin?
+Assets/Scenes/Campaign/GravShip_02.unity
 Assets/Scenes/Campaign/GravShip_00.unity
-Assets/Scenes/Campaign/GravShip_01.unity
+Assets/Scenes/Campaign/GravShipCommand_00.unity
 Assets/Scenes/Campaign/Test_1.unity
 Assets/Scenes/Campaign/Test_0.unity
 SceneListEnd?
@@ -127,7 +128,7 @@ fc061f3ae8a876c0687e86378d4a447c UnityEngine.Networking.dll:UnityEngine.Networki
 7ca56e063bd071986fff4f513cc4f477 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 b23ca9ea291865b6fff02bcf3bf3526e Assembly-CSharp.dll:.LevelRef
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
-80158c48fb2165cf93165d2a81831ae6 Assembly-CSharp.dll:.CampaignHandler
+abb7e4279386a23ead7f6181fcabd470 Assembly-CSharp.dll:.CampaignHandler
 382b8ef512fa8d6108723a01b57af65b UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 d22c788799ee45d8676254eccf20e8b8 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker
 9617ea3e17a2e850bb69928c184be4d3 Assembly-CSharp.dll:.GravityGun

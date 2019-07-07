@@ -2,12 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CampaignHandler : MonoBehaviour {
     public GameObject PlayerPrefab;
     private string portalName = "";
     public bool HasGravGun = false;
     public GameObject GravGunPrefab;
+
+    public Text FPSText;
+    public Text GunForceText;
+    public GameObject GunForceArrow;
 
     // called first
     void OnEnable()
@@ -76,5 +81,11 @@ public class CampaignHandler : MonoBehaviour {
             }
         }
         else Debug.Log("Player is missing!");
+    }
+
+    private void Update()
+    {
+        int fps = (int) (1f / Time.deltaTime);
+        FPSText.text = fps.ToString();
     }
 }
